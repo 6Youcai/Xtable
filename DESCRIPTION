@@ -1,0 +1,15 @@
+Package: Xtable
+Type: Package
+Title: Advanced Tables for R Markdown
+Version: 0.1.0
+Date: 2017-09-27
+Author: Youcai Liu
+Maintainer: Youcai Liu <youcai.6@qq.com>
+Imports: 
+  stringr,
+  magrittr
+Description: generate advance table use simple markdown syntax
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
