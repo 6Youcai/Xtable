@@ -22,8 +22,7 @@ Content Cell  | Content Cell
 
 I defined `$v2;` for a cell than spans to the down for two rows;
 
-```
-\```{r, echo=FALSE, results='asis'}
+```{r, echo=FALSE, results='asis'}
 library(Xtable)
 text <- "First Header  | Second Header | Third Header
 ------------- | ------------- | ------------
@@ -31,7 +30,6 @@ $v2;Content Cell 1 | Content Cell 2 | Content Cell 3
 Content Cell 4 | Content Cell 5  
 "
 Xtable::Mtable(text)
-\```
 ```
 
 in R markdown, these code will generate
@@ -43,8 +41,7 @@ in R markdown, these code will generate
 
 similarly, `$>3;` means a cell that spans to the right for three cols.
 
-```
-\```{r, echo=FALSE, results='asis'}
+```{r, echo=FALSE, results='asis'}
 text <- "
 First Header  | Second Header | Third Header | Fourth Header
 ------------- | ------------- | ------------ | -------------  
@@ -53,15 +50,13 @@ Content Cell 5 |$>3;Content Cell 6
 $>2;Content Cell 7| Content Cell 8| Content Cell 9
 "
 Mtable(text)
-\```
 ```
 
 ![](img/col.png)
 
 ## mixed
 
-```
-\```{r, echo=FALSE, results='asis'}
+```{r, echo=FALSE, results='asis'}
 text <- "
 Content Cell 1 | Content Cell 2  | Content Cell 3 | Content Cell 4 | Content Cell 5
 Content Cell 6  | $v2;$>2;Content Cell  7 | Content Cell 8
@@ -70,7 +65,6 @@ Content Cell 12 | Content Cell  13| Content Cell 14| Content Cell 15
 Content Cell  16| Content Cell  17| $>3;Content Cell 18 
 "
 Mtable(text)
-\```
 ```
 
 ![](img/mix.png)
