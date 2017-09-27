@@ -13,7 +13,8 @@ cell <- function(x, header = FALSE) {
 
   if(str_detect(x, "\\$>\\d+;")) {
     colspan <- str_match(x, "\\$>(\\d+);")[2] %>%
-      paste0(' colspan="', ., '"')
+      # default is left
+      paste0(' align=\"center\" colspan="', ., '"')
     x <- str_replace(x, "\\$>\\d+;", "")
   } else
     colspan <- ""
