@@ -48,7 +48,7 @@ Mtable <- function(raw_text) {
     t_header <- Line(text_arr[1], TRUE)
     t_body <- sapply(text_arr[3: length(text_arr)], Line) %>%
       paste0(., collapse = "\n")
-    paste0("<table><thead>",
+    paste0("<table class=\"table table-condensed\"><thead>",
           t_header, "</thead>",
           "<tbody>", t_body,
           "</tbody></table>") %>% cat
@@ -56,6 +56,6 @@ Mtable <- function(raw_text) {
     # without header
     t_body <- sapply(text_arr, Line) %>%
       paste0(., collapse = "\n")
-    paste0("<table><tbody>", t_body, "</tbody></table>") %>% cat
+    paste0("<table class=\"table table-condensed\"><tbody>", t_body, "</tbody></table>") %>% cat
   }
 }
